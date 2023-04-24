@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "Hash": "U6jCfeCh1ID8BUaF25WALEpzZE9Wb+anqg9iAWzSMK4=",
+  "Source": "PricatMVC",
+  "BasePath": "_content/PricatMVC",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\PricatMVC\\obj\\Debug\\net7.0\\scopedcss\\bundle\\PricatMVC.styles.css",
+      "SourceId": "PricatMVC",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\PricatMVC\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/PricatMVC",
+      "RelativePath": "PricatMVC.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\PricatMVC\\obj\\Debug\\net7.0\\scopedcss\\bundle\\PricatMVC.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\PricatMVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\PricatMVC.bundle.scp.css",
+      "SourceId": "PricatMVC",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\PricatMVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/PricatMVC",
+      "RelativePath": "PricatMVC.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\PricatMVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\PricatMVC.bundle.scp.css"
+    }
+  ]
+}
