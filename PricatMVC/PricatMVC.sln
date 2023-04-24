@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricatMVC", "PricatMVC\PricatMVC.csproj", "{C0C6C6A5-B7A5-49AD-826B-9927023DAE18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricatMVC", "PricatMVC.csproj", "{869ECE3B-72BA-40F4-9322-B69333560A89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C0C6C6A5-B7A5-49AD-826B-9927023DAE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0C6C6A5-B7A5-49AD-826B-9927023DAE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0C6C6A5-B7A5-49AD-826B-9927023DAE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0C6C6A5-B7A5-49AD-826B-9927023DAE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{869ECE3B-72BA-40F4-9322-B69333560A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{869ECE3B-72BA-40F4-9322-B69333560A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{869ECE3B-72BA-40F4-9322-B69333560A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{869ECE3B-72BA-40F4-9322-B69333560A89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C1939E4D-B446-4761-AC6A-6277C5B23DD3}
+		SolutionGuid = {B3C676E7-D854-461B-BC93-0662FFC44920}
 	EndGlobalSection
 EndGlobal
