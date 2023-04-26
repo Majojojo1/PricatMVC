@@ -10022,11 +10022,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\WebDevelopment\\Exams\\Exam-02\\PricatMVC\\PricatMVC.csproj",
+      "projectUniqueName": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\PricatMVC.csproj",
       "projectName": "PricatMVC",
-      "projectPath": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\WebDevelopment\\Exams\\Exam-02\\PricatMVC\\PricatMVC.csproj",
+      "projectPath": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\PricatMVC.csproj",
       "packagesPath": "C:\\Users\\Maria Jose Ospina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\WebDevelopment\\Exams\\Exam-02\\PricatMVC\\obj\\",
+      "outputPath": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Maria Jose Ospina\\AppData\\Roaming\\NuGet\\NuGet.Config",

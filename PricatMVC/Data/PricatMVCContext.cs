@@ -15,5 +15,7 @@ namespace PricatMVC.Data
         }
 
         public DbSet<PricatMVC.Models.Category> Category { get; set; } = default!;
+
+        public DbSet<PricatMVC.Models.Product>? Product { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZZNZij4S0QMNxnrC28QhKDpGwDFayUMpe3gERth8Ol9pdi9JkDGzsA1i7+SpW29Ve+SwHXuPSwBAw5w9aO2tSQ==",
+  "dgSpecHash": "30AM9BDfnTJTs4ejHNNNCbDK6qEhJ6v+0LF7bqRxCKvqkGm1g31SwTKKpsvDRMLgh5Mu7aIzj1K9BD30xtlY6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\WebDevelopment\\Exams\\Exam-02\\PricatMVC\\PricatMVC.csproj",
+  "projectFilePath": "C:\\Users\\Maria Jose Ospina\\Documents\\GitHub\\PricatMVC\\PricatMVC\\PricatMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maria Jose Ospina\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Maria Jose Ospina\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
