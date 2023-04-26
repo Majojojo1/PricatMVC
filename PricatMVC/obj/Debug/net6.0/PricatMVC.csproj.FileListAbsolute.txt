@@ -540,3 +540,7 @@ C:\Users\Maria Jose Ospina\Documents\GitHub\PricatMVC\PricatMVC\obj\Debug\net6.0
 C:\Users\Maria Jose Ospina\Documents\GitHub\PricatMVC\PricatMVC\obj\Debug\net6.0\PricatMVC.pdb
 C:\Users\Maria Jose Ospina\Documents\GitHub\PricatMVC\PricatMVC\obj\Debug\net6.0\PricatMVC.genruntimeconfig.cache
 C:\Users\Maria Jose Ospina\Documents\GitHub\PricatMVC\PricatMVC\obj\Debug\net6.0\ref\PricatMVC.dll
+C:\Users\Maria Jose Ospina\Documents\GitHub\PricatMVC\PricatMVC\bin\Debug\net6.0\RestSharp.dll
+C:\Users\Maria Jose Ospina\Documents\GitHub\PricatMVC\PricatMVC\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Maria Jose Ospina\Documents\GitHub\PricatMVC\PricatMVC\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\Maria Jose Ospina\Documents\GitHub\PricatMVC\PricatMVC\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

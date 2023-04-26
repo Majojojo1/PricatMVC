@@ -1,34 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using PricatMVC.Data;
+﻿using Microsoft.AspNetCore.Mvc;
 using PricatMVC.Models;
+using PricatMVC.Services;
 
 namespace PricatMVC.Controllers
 {
     public class ProductsController : Controller
     {
-        private readonly PricatMVCContext _context;
         private static List<Product> productList = null!;
         private static int numProducts;
-        public ProductsController()
-        {
-            // Mock Student List
-            if (productList is null)
-            {
-                productList = new List<Product>()
-        {
-            new Product{CategoryId = 1, Description = "Arroz", EanCode = "7707548516286", Id = 1, Price = 500.0, Unit = "Lb"},
-            new Product{CategoryId = 1, Description = "Papa", EanCode = "7707548941507", Id = 2, Price = 1500.0, Unit = "Lb"},
-            new Product{CategoryId = 2, Description = "Cocacola", EanCode = "7707548160274", Id = 3, Price = 2500.0, Unit = "Lb"},
-        };
 
-                numProducts = productList.Count;
-            }
+        private static ProductService _productService;
+
+        public ProductsController(ProductService productService)
+        {
+            _productService = productService;
         }
 
         // GET: ProductsController

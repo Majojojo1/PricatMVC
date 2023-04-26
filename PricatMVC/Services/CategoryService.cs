@@ -19,7 +19,7 @@ namespace PricatMVC.Services
 
         public async Task<List<Category>> GetAll()
         {
-            var categoryList = await GetAllCategory();
+            var categoryList = await GetAllCategories();
             return categoryList;
         }
 
@@ -64,7 +64,7 @@ namespace PricatMVC.Services
         }
 
 
-        private async Task<List<Category>> GetAllCategory()
+        private async Task<List<Category>> GetAllCategories()
         {
             var request = new RestRequest($"{baseUrl}/categories", Method.Get);
             var response = await _restClient.GetAsync(request);

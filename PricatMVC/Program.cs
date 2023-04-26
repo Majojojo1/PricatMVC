@@ -1,12 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using PricatMVC.Data;
+using PricatMVC.Services;
+using RestSharp;
+
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<PricatMVCContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PricatMVCContext") ?? throw new InvalidOperationException("Connection string 'PricatMVCContext' not found.")));
+
+builder.Services.AddControllersWithViews();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddMvc();
+builder.Services.AddScoped<RestClient>();
+builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<ProductService>();
 
 var app = builder.Build();
 
