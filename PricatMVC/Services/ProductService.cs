@@ -74,6 +74,7 @@ namespace PricatMVC.Services
             return data!;
         }
 
+
         private async Task<List<Product>> GetProductsByPage(int page, int limit)
         {
             var request = new RestRequest($"{baseUrl}/products?_page={page}&_limit={limit}", Method.Get);
@@ -129,6 +130,31 @@ namespace PricatMVC.Services
             var data = response.Content!;
 
             return response.IsSuccessStatusCode;
+        }
+
+        public async Task<List<Product>> GetAllByCategoryId(int id)
+        {
+            List<Product>? data = await GetAll();
+            if (data != null)
+            {
+                data = data.Where(data => data.CategoryId == id).ToList();
+            }
+
+            return data!;
+        }
+
+        public async Task<bool> RemoveProductByCategoryId(int id)
+        {
+            try 
+            {
+                List<Product> products = await GetAllByCategoryId(id);
+                products.ForEach(async product => await RemoveProduct(product.Id));
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
         }
     }
 }

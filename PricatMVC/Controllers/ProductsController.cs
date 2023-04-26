@@ -17,43 +17,49 @@ namespace PricatMVC.Controllers
         }
 
         // GET: ProductsController
-        public ActionResult Index()
+       public async Task<ActionResult> Index()
         {
-            return View(productList);
+            List<Product> products = await _productService.GetAll();
+            return View(products);
+        }
+
+        // GET: ProductsController/categories/5
+        [Route("ProductsController/{id:int}")]
+        public async Task<ActionResult> ProductByCategory(int id)
+        {
+            List<Product> products = await _productService.GetAllByCategoryId(id);
+            return View(products);
         }
 
         // GET: ProductsController/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
-            var productFound = productList.FirstOrDefault(u => u.Id == id);
+            Product product = await _productService.GetById(id);
 
-            if (productFound == null)
+            if (product == null)
             {
                 return NotFound();
             }
 
-            return View(productFound);
+            return View(product);
         }
 
         // GET: ProductsController/Create
         public ActionResult Create()
         {
-            var product = new Product();
-            product.Id = 4;
-            return View(product);
+            return View();
         }
 
         // POST: ProductsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Product product)
+        public async Task<ActionResult> Create(Product product)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    product.Id = ++numProducts;
-                    productList.Add(product);
+                    Product products = await _productService.CreateProduct(product);
                 }
 
                 return RedirectToAction(nameof(Index));
@@ -65,38 +71,35 @@ namespace PricatMVC.Controllers
         }
 
         // GET: ProductsController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            var productFound = productList.FirstOrDefault(u => u.Id == id);
+            Product product = await _productService.GetById(id);
 
-            if (productFound == null)
+            if (product == null)
             {
                 return NotFound();
             }
 
-            return View(productFound);
+            return View(product);
         }
-
         // POST: ProductsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Product product)
+        public async Task<ActionResult> Edit(Product product)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var productFound = productList.FirstOrDefault(u => u.Id == product.Id);
+                    Product productFound = await _productService.GetById(product.Id);
 
                     if (productFound == null)
                     {
                         return View();
                     }
 
-                    productFound.Description = product.Description;
-                    productFound.EanCode = product.EanCode;
-                    productFound.Price = product.Price;
-                    productFound.Unit = product.Unit;
+                    Product productUpdated = await _productService.EditProduct(productFound.Id, product);
+
 
                     return RedirectToAction(nameof(Index));
                 }
@@ -110,9 +113,9 @@ namespace PricatMVC.Controllers
         }
 
         // GET: ProductsController/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var productFound = productList.FirstOrDefault(u => u.Id == id);
+            Product productFound = await _productService.GetById(id);
 
             if (productFound == null)
             {
@@ -125,19 +128,20 @@ namespace PricatMVC.Controllers
         // POST: ProductsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(Product product)
+        public async Task<ActionResult> Delete(Product product)
         {
             try
             {
-                var productFound = productList.FirstOrDefault(u => u.Id == product.Id);
+                Product productFound = await _productService.GetById(product.Id);
 
                 if (productFound == null)
                 {
                     return View();
                 }
 
+                await _productService.DeleteProduct(productFound.Id);
 
-                productList.Remove(productFound);
+
                 return RedirectToAction(nameof(Index));
             }
             catch

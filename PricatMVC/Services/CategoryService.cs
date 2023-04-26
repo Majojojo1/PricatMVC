@@ -10,11 +10,13 @@ namespace PricatMVC.Services
         private readonly IConfiguration _configuration;
         private readonly string baseUrl;
         private readonly RestClient _restClient;
-        public CategoryService(RestClient restClient, IConfiguration configuration)
+        private static ProductService _productoService;
+        public CategoryService(RestClient restClient, IConfiguration configuration, ProductService productService)
         {
             _configuration = configuration;
             baseUrl = configuration.GetSection("BaseUrl").Value;
             _restClient = restClient;
+            _productoService = productService;
         }
 
         public async Task<List<Category>> GetAll()
@@ -61,6 +63,8 @@ namespace PricatMVC.Services
         public async Task DeleteCategory(int id)
         {
             await RemoveCategory(id);
+
+            await _productoService.RemoveProductByCategoryId(id);
         }
 
 
@@ -130,5 +134,6 @@ namespace PricatMVC.Services
 
             return response.IsSuccessStatusCode;
         }
+
     }
 }
